@@ -15,13 +15,15 @@ const Contact = () => {
 
     <div className="p-5 space-y-5">
         <img
-            src="/images/adrian.jpg"
-            alt="Adrian"
+            src="/images/jahnavi.png"
+            alt="Jahnavi"
             className="w-20 rounded-full"
         />
         <h3>Let's Connect</h3>
-        <p>Let's Discuss Tech</p>
-
+        <p>I'm always open to discussing new opportunities, collaborating on interesting projects, or simply connecting with fellow developers. 
+            If you have an idea or just want to say hello, I'd love to hear from you.
+        </p>
+        <p><b>Email : </b>jahnavi.sharma1210@gmail.com</p>
         <ul>
             {socials.map(({id, bg, link, icon, text}) => (
                 <li key={id} style={{backgroundColor: bg}}>

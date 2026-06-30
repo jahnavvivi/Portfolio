@@ -101,28 +101,28 @@ const blogPosts = [
 
 const techStack = [
   {
+    category: "Languages",
+    items: ["C++", "Python", "JavaScript", "Java(basic)"],
+  },
+  {
+    category: "AI/ML",
+    items: ["Numpy", "Pandas", "Matplotlib/Seaborn", "Scikit-learn","PyTorch", "OpenCV"],
+  },
+  {
     category: "Frontend",
-    items: ["React.js", "Next.js", "TypeScript"],
-  },
-  {
-    category: "Mobile",
-    items: ["React Native", "Expo"],
-  },
-  {
-    category: "Styling",
-    items: ["Tailwind CSS", "Sass", "CSS"],
+    items: ["React.js","HTML5","CSS3","Tailwind CSS"],
   },
   {
     category: "Backend",
-    items: ["Node.js", "Express", "NestJS", "Hono"],
+    items: ["Node.js", "Express.js", "Flask", "REST APIs"],
   },
   {
     category: "Database",
-    items: ["MongoDB", "PostgreSQL"],
+    items: ["MongoDB", "PostgreSQL", "MySQL"],
   },
   {
-    category: "Dev Tools",
-    items: ["Git", "GitHub", "Docker"],
+    category: "Dev Tools & Platforms",
+    items: ["Git", "GitHub", "Docker", "GitLab", "Postman", "VS Code"],
   },
 ];
 
@@ -132,28 +132,28 @@ const socials = [
     text: "Github",
     icon: "/icons/github.svg",
     bg: "#f4656b",
-    link: "https://github.com/JavaScript-Mastery-Pro",
+    link: "https://github.com/jahnavvivi",
   },
   {
     id: 2,
-    text: "Platform",
-    icon: "/icons/atom.svg",
-    bg: "#4bcb63",
-    link: "https://jsmastery.com/",
-  },
-  {
-    id: 3,
-    text: "Twitter/X",
-    icon: "/icons/twitter.svg",
-    bg: "#ff866b",
-    link: "https://x.com/jsmasterypro",
-  },
-  {
-    id: 4,
     text: "LinkedIn",
     icon: "/icons/linkedin.svg",
     bg: "#05b6f6",
-    link: "https://www.linkedin.com/company/javascriptmastery/posts/?feedView=all",
+    link: "https://www.linkedin.com/in/jahnavi-sharma-b77847328/",
+  },
+  {
+    id: 3,
+    text: "LeetCode",
+    icon: "/icons/leetcode.svg",
+    bg: "#ff866b",
+    link: "https://leetcode.com/u/jahnavvivi/",
+  },
+  {
+    id: 4,
+    text: "CodeChef",
+    icon: "/icons/codechef.svg",
+    bg: "#4bcb63",
+    link: "https://www.codechef.com/users/jahnavvivi_12",
   },
 ];
 

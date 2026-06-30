@@ -37,7 +37,7 @@ body {
   }
 
   nav {
-    @apply flex justify-between items-center bg-white/50 backdrop-blur-3xl p-2 px-5 select-none;
+    @apply flex justify-between items-center bg-white/50 backdrop-blur-3xl p-2 px-5 select-none transition-colors duration-200;
 
     div {
       @apply flex items-center max-sm:w-full max-sm:justify-center gap-5;
@@ -86,7 +86,7 @@ body {
     }
 
     .tooltip {
-      @apply !py-1 !px-3 !w-fit !text-center !text-xs !rounded-md !bg-blue-200 !text-blue-900 !shadow-2xl;
+      @apply py-1! px-3! w-fit! text-center! text-xs! rounded-md! bg-blue-200! text-blue-900! shadow-2xl!;
     }
 
     .dock-icon {
@@ -101,21 +101,52 @@ body {
   #window-controls {
     @apply flex gap-2;
 
+    button {
+      @apply size-3.5 rounded-full border-0 p-0 cursor-pointer transition-all duration-150 outline-none;
+      position: relative;
+
+      &::after {
+        content: attr(data-label);
+        @apply absolute left-1/2 top-5 -translate-x-1/2 whitespace-nowrap rounded-md bg-black/80 px-2 py-1 text-[10px] font-medium text-white opacity-0 pointer-events-none transition-opacity duration-150;
+      }
+
+      &:hover::after {
+        @apply opacity-100;
+      }
+    }
+
     .close {
-      @apply size-3.5 rounded-full bg-[#ff6157] cursor-pointer;
+      @apply bg-[#ff6157] hover:bg-[#ff3b30];
     }
 
     .minimize {
-      @apply size-3.5 rounded-full bg-[#ffc030];
+      @apply bg-[#ffc030] hover:bg-[#ffbf00];
     }
 
     .maximize {
-      @apply size-3.5 rounded-full bg-[#2acb42];
+      @apply bg-[#2acb42] hover:bg-[#28a745];
     }
   }
 
   #window-header {
-    @apply flex items-center justify-between px-4 py-3 rounded-t-lg bg-gray-50 border-b border-gray-200 select-none text-sm text-gray-400;
+    @apply sticky top-0 z-20 flex items-center justify-between px-4 py-3 rounded-t-lg bg-gray-50 border-b border-gray-200 select-none text-sm text-gray-400 transition-colors duration-200;
+  }
+
+  .window-resize-handle {
+    @apply absolute bottom-1 right-1 size-4 cursor-nwse-resize rounded-sm bg-transparent;
+
+    &::before {
+      content: '';
+      @apply absolute bottom-0 right-0 size-2.5 rounded-tl-lg border-r-2 border-b-2 border-gray-300;
+    }
+
+    &:hover::before {
+      @apply border-gray-500;
+    }
+  }
+
+  .window-maximized {
+    @apply rounded-none;
   }
 
   #safari {
@@ -355,6 +386,34 @@ body {
 
     h2 {
       @apply font-bold text-sm text-center w-full;
+    }
+
+    .text-file-window {
+      @apply flex flex-col gap-4 p-4 bg-white;
+    }
+
+    .text-file-preview {
+      @apply overflow-hidden rounded-xl border border-gray-200 bg-gray-100;
+
+      img {
+        @apply block w-full h-44 object-cover object-center;
+      }
+    }
+
+    .text-file-content {
+      @apply space-y-3 text-gray-800;
+
+      .subtitle {
+        @apply text-sm font-medium text-gray-500;
+      }
+
+      .text-file-body {
+        @apply space-y-3 text-sm leading-6;
+
+        p {
+          @apply text-gray-700;
+        }
+      }
     }
   }
 

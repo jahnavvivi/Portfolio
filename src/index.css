@@ -7,7 +7,7 @@ body {
   width: 100dvw;
   overflow: hidden;
   height: 100dvh;
-  background-image: url("/images/wallpaper.png");
+  background-image: url("/images/macos.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -62,8 +62,84 @@ body {
 }
 
 @layer components {
+  .read-more {
+    @apply text-blue-600 text-xs flex items-center gap-3 hover:underline cursor-pointer;
+  }
+
   .icon {
     @apply p-1 hover:bg-gray-200 rounded hover:cursor-default;
+  }
+
+  .blog-page{
+      @apply bg-white p-10 max-w-3xl mx-auto;
+  }
+
+  .blog-page .hero-image{
+      @apply w-full h-80 object-cover rounded-xl mb-6;
+  }
+
+  .blog-page h1{
+      @apply text-3xl font-bold mb-3;
+  }
+
+  .blog-page .date{
+      @apply text-sm text-gray-500 mb-4;
+  }
+
+  .blog-page .article{
+      @apply space-y-5 text-gray-700 leading-8;
+  }
+
+  .description{
+      @apply text-sm text-gray-500 leading-6;
+  }
+
+  .markdown{
+      @apply text-gray-700 leading-8;
+  }
+
+  .markdown h1{
+      @apply text-4xl font-bold mb-6 mt-10;
+  }
+
+  .markdown h2{
+      @apply text-3xl font-semibold mt-10 mb-4;
+  }
+
+  .markdown h3{
+      @apply text-2xl font-semibold mt-8 mb-3;
+  }
+
+  .markdown p{
+      @apply mb-6;
+  }
+
+  .markdown img{
+      @apply rounded-xl my-8;
+  }
+
+  .markdown ul{
+      @apply list-disc ml-8 mb-6;
+  }
+
+  .markdown ol{
+      @apply list-decimal ml-8 mb-6;
+  }
+
+  .markdown li{
+      @apply mb-2;
+  }
+
+  .markdown pre{
+      @apply bg-[#1e1e1e] text-white p-5 rounded-xl overflow-x-auto my-8;
+  }
+
+  .markdown code{
+      @apply font-mono text-sm;
+  }
+
+  .markdown blockquote{
+      @apply border-l-4 border-blue-500 pl-5 italic my-6;
   }
 
   #welcome {
@@ -86,7 +162,7 @@ body {
     }
 
     .tooltip {
-      @apply py-1! px-3! w-fit! text-center! text-xs! rounded-md! bg-blue-200! text-blue-900! shadow-2xl!;
+      @apply py-1! px-3! w-fit! text-center! text-xs! rounded-md! bg-gray-300! text-black! shadow-2xl!;
     }
 
     .dock-icon {
@@ -153,8 +229,7 @@ body {
     @apply w-4xl absolute top-40 left-2/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
 
     .search {
-      @apply flex items-center gap-3 w-2/3 bg-white border border-gray-300 rounded-lg px-3 py-2;
-
+      @apply flex items-center gap-3 flex-1 max-w-2xl bg-white border border-gray-300 rounded-lg px-3 py-2;
       input {
         @apply placeholder:text-gray-400;
       }

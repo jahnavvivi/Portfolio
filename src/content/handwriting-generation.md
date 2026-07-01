@@ -1,5 +1,3 @@
-# Building My macOS Portfolio
-
 I wanted this project to feel more like an operating system than a website.
 
 ---

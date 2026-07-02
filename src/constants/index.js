@@ -78,11 +78,11 @@ const blogPosts = [
   {
     id: 1,
     slug:"handwriting-generation",
-    title: "Building My macOS Portfolio",
-    date: "July 2026",
+    title: "InkFlow : Handwriting Generation App",
+    date: "May 2026",
     image: "/images/blogs/macos.png",
     description:
-      "How I recreated macOS using React, GSAP and Tailwind."
+      "A web app that generates handwriting from typed text using deep learning."
   },
 
   {
@@ -92,7 +92,7 @@ const blogPosts = [
     date: "June 2026",
     image: "/images/blogs/internship.png",
     description:
-      "Things I learned while working on production software."
+      "Things I learned while being a Product Intern at CollegeDunia."
   },
 
   {
@@ -102,7 +102,7 @@ const blogPosts = [
     date: "September 2025",
     image: "/images/blogs/sih.png",
     description:
-      "Building an AI solution during Smart India Hackathon."
+      "Building an ML based solution during Smart India Hackathon."
   }
 ];
 
